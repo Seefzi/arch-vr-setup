@@ -1,0 +1,12 @@
+firefox
+sshd
+tmux
+kitty
+zsh
+zsh-autocomplete
+zsh-completions
+fzf
+flatpak
+avahi
+bluez
+bluez-utils

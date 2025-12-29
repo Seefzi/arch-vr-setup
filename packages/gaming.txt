@@ -1,0 +1,12 @@
+obs-studio
+steam
+envision
+corectrl
+blender
+unityhub
+alcom
+vesktop
+prismlauncher
+libtiff5
+slimevr-beta-bin
+protonup

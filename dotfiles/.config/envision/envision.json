@@ -1,0 +1,122 @@
+{
+  "selected_profile_uuid": "f634fa9e-51c0-4817-a006-69796d77dd2b",
+  "debug_view_enabled": false,
+  "user_profiles": [
+    {
+      "uuid": "f634fa9e-51c0-4817-a006-69796d77dd2b",
+      "name": "WiVRn on xrizer with SolarXR",
+      "xrservice_type": "Wivrn",
+      "xrservice_path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/xrservice",
+      "xrservice_repo": "https://github.com/notpeelz/WiVRn.git",
+      "xrservice_branch": "solarxr-patches",
+      "xrservice_cmake_flags": {
+        "WIVRN_FEATURE_SOLARXR": "ON"
+      },
+      "opencomposite_path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/opencomposite",
+      "opencomposite_repo": null,
+      "opencomposite_branch": null,
+      "ovr_comp": {
+        "mod_type": "Xrizer",
+        "repo": "https://github.com/ImSapphire/xrizer",
+        "branch": "next",
+        "path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/xrizer"
+      },
+      "features": {
+        "libsurvive": {
+          "feature_type": "Libsurvive",
+          "enabled": false,
+          "path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/libsurvive",
+          "repo": null,
+          "branch": null
+        },
+        "basalt": {
+          "feature_type": "Basalt",
+          "enabled": false,
+          "path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/basalt",
+          "repo": null,
+          "branch": null
+        },
+        "openhmd": {
+          "feature_type": "OpenHmd",
+          "enabled": false,
+          "path": "/home/seefzi/.local/share/envision/f634fa9e-51c0-4817-a006-69796d77dd2b/openhmd",
+          "repo": null,
+          "branch": null
+        },
+        "mercury_enabled": false
+      },
+      "environment": {
+        "U_PACING_APP_USE_MIN_FRAME_PERIOD": "1",
+        "LD_LIBRARY_PATH": "/home/seefzi/.local/share/envision/prefixes/f634fa9e-51c0-4817-a006-69796d77dd2b/lib:/home/seefzi/.local/share/envision/prefixes/f634fa9e-51c0-4817-a006-69796d77dd2b/lib64",
+        "XRT_DEBUG_GUI": "1",
+        "XRT_CURATED_GUI": "1"
+      },
+      "prefix": "/home/seefzi/.local/share/envision/prefixes/f634fa9e-51c0-4817-a006-69796d77dd2b",
+      "can_be_built": true,
+      "editable": true,
+      "pull_on_build": true,
+      "lighthouse_driver": "Vive",
+      "xrservice_launch_options": "%command% --no-instructions --no-manage-active-runtime",
+      "skip_dependency_check": false
+    }
+  ],
+  "win_size": [
+    676,
+    580
+  ],
+  "plugins": {
+    "com.github.galister.wlx-overlay-s": {
+      "plugin": {
+        "appid": "com.github.galister.wlx-overlay-s",
+        "name": "WlxOverlay-S",
+        "author": null,
+        "icon_url": "https://github.com/galister/wlx-overlay-s/raw/main/wlx-overlay-s.svg",
+        "version": "25.4.2",
+        "short_description": "Access your Wayland/X11 desktop",
+        "description": "A lightweight OpenXR/OpenVR overlay for Wayland and X11 desktops, inspired by XSOverlay.\n\nWlxOverlay-S allows you to access your desktop screens while in VR.\n\nIn comparison to similar overlays, WlxOverlay-S aims to run alongside VR games and experiences while having as little performance impact as possible. The UI appearance and rendering techniques are kept as simple and efficient as possible, while still allowing a high degree of customizability.",
+        "homepage_url": null,
+        "screenshots": [
+          "https://github.com/galister/wlx-overlay-s/raw/guide/wlx-s.png"
+        ],
+        "exec_url": "https://github.com/galister/wlx-overlay-s/releases/download/v25.4.2/WlxOverlay-S-v25.4.2-x86_64.AppImage",
+        "exec_path": "/home/seefzi/.local/share/envision/plugins/com.github.galister.wlx-overlay-s",
+        "args": [
+          "--openxr"
+        ],
+        "env_vars": null,
+        "dependencies": null,
+        "conflicts": null,
+        "plugin_type": "Executable"
+      },
+      "enabled": true
+    },
+    "dev.oo8.wayvr_dashboard": {
+      "plugin": {
+        "appid": "dev.oo8.wayvr_dashboard",
+        "name": "WayVR Dashboard",
+        "author": "Aleksander (oo8dev)",
+        "icon_url": "https://raw.githubusercontent.com/olekolek1000/wayvr-dashboard/refs/heads/master/wayvr-dashboard.svg",
+        "version": "0.3.8",
+        "short_description": "Game and application launcher for VR",
+        "description": "Launch your favorite desktop applications and games seamlessly within your VR environment (wlx-overlay-s addon)",
+        "homepage_url": null,
+        "screenshots": [
+          "https://github.com/olekolek1000/wayvr-dashboard/blob/master/contrib/front.jpg?raw=true"
+        ],
+        "exec_url": "https://github.com/olekolek1000/wayvr-dashboard/releases/download/0.3.8/wayvr-dashboard.x86_64",
+        "exec_path": "/home/seefzi/.local/share/envision/plugins/dev.oo8.wayvr_dashboard",
+        "args": null,
+        "env_vars": {
+          "GDK_BACKEND": "wayland"
+        },
+        "dependencies": [
+          "com.github.galister.wlx-overlay-s"
+        ],
+        "conflicts": null,
+        "plugin_type": "WayVrDashboard"
+      },
+      "enabled": true
+    }
+  },
+  "theme_name": "Catppuccin Mocha"
+}

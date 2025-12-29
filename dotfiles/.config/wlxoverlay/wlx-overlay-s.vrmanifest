@@ -1,0 +1,1 @@
+{"source":"builtin","applications":[{"app_key":"galister.wlxoverlay-s","launch_type":"binary","binary_path_linux":"/home/seefzi/wlx-next/wlx-overlay-s/target/release/wlx-overlay-s","is_dashboard_overlay":true,"strings":{"en_us":{"name":"WlxOverlay-S","description":"A lightweight Wayland desktop overlay for OpenVR/OpenXR"}}}]}

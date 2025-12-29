@@ -1,0 +1,5 @@
+dashboard:
+  exec: /home/seefzi/.local/share/envision/plugins/dev.oo8.wayvr_dashboard
+  args: null
+  env:
+  - GDK_BACKEND=wayland
