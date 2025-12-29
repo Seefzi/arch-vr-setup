@@ -10,3 +10,5 @@ flatpak
 avahi
 bluez
 bluez-utils
+nodejs-lts-iron
+dotnet-sdk
