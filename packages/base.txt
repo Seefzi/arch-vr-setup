@@ -8,5 +8,5 @@ flatpak
 avahi
 bluez
 bluez-utils
-nodejs-lts-iron
+nodejs-lts-krypton
 dotnet-sdk
