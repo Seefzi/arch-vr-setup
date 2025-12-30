@@ -6,16 +6,11 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
 plugins=(
-  git
+    git
+    archlinux
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
-
-# ---- zsh-autocomplete (Arch package) ----
-if [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-fi
-
-# ---- extra completions (Arch package) ----
-fpath+=(/usr/share/zsh/site-functions)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -11,3 +11,13 @@ else
   echo "==> Oh My Zsh already installed"
 fi
 
+AUTOCOMP_DIR="$ZSH/custom/plugins/zsh-autocomplete"
+
+if [ ! -d "$AUTOCOMP_DIR" ]; then
+  echo "==> Installing zsh-autocomplete"
+  git clone https://github.com/marlonrichert/zsh-autocomplete.git "$AUTOCOMP_DIR"
+  echo "==> Installing zsh-completions"
+  git clone https://github.com/zsh-users/zsh-completions.git "$AUTOCOMP_DIR"
+fi
+
+

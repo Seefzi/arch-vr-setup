@@ -3,8 +3,6 @@ openssh
 tmux
 kitty
 zsh
-zsh-autocomplete
-zsh-completions
 fzf
 flatpak
 avahi
