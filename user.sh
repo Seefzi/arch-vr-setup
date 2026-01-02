@@ -1,4 +1,5 @@
-if [ "$SHELL" != "/bin/zsh" ]; then
+if [ "$SHELL" != "/bin/fish" ]; then
   echo "==> Setting zsh as default shell"
-  chsh -s /bin/zsh
+  chsh -s /bin/fish
 fi
+

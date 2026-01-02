@@ -2,7 +2,7 @@ firefox
 openssh
 tmux
 kitty
-zsh
+fish
 fzf
 flatpak
 avahi

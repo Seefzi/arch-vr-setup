@@ -45,14 +45,16 @@ fi
 FSTAB="/etc/fstab"
 MARKER="# === kyurem servers ==="
 
-read -r -d '' KYUREM_FSTAB <<EOF
+KYUREM_FSTAB=$(cat <<EOF
 # === kyurem servers ===
 # kyurem active server
-//kyurem/speed   /media/kyurem-s   cifs   credentials=$CREDS_FILE,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
+//kyurem/speed   /media/kyurem-s   cifs   credentials=$REAL_HOME/.reshcreds,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
 
 # kyurem hoard server
-//kyurem/archive /media/kyurem-a   cifs   credentials=$CREDS_FILE,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
+//kyurem/archive /media/kyurem-a   cifs   credentials=$REAL_HOME/.reshcreds,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
 EOF
+)
+
 
 # ---- mount points ----
 sudo mkdir -p /media/kyurem-s /media/kyurem-a

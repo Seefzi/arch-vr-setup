@@ -25,7 +25,6 @@ link() {
 }
 
 # ---- actual links ----
-link .zshrc
 link .config/nvim
 link .config/kitty
 link .config/wlxoverlay
