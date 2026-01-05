@@ -9,4 +9,4 @@ vesktop
 prismlauncher
 libtiff5
 slimevr-beta-bin
-protonup
+protonup-qt

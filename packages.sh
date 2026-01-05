@@ -17,9 +17,6 @@ GAMING=${GAMING,,}
 if [[ -z "$GAMING" || "$GAMING" == "y" || "$GAMING" == "yes" ]]; then
   echo "==> Installing gaming packages"
   yay -S --needed --noconfirm $(< packages/gaming.txt)
-
-  echo "==> Installing latest Proton-GE"
-  protonup -t GE
 else
   echo "==> Skipping gaming setup"
 fi
