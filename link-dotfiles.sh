@@ -29,3 +29,4 @@ link .config/nvim
 link .config/kitty
 link .config/wlxoverlay
 link .config/envision
+link .config/fish

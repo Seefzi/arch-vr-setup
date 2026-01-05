@@ -20,6 +20,15 @@ for s in "${services[@]}"; do
   sudo systemctl enable --now "$s"
 done
 
+# ---- ask about kyurem servers ----
+read -rp "Would you like to configure Kyurem SMB mounts? [y/N]: " SETUP_KYUREM
+SETUP_KYUREM=${SETUP_KYUREM,,} # lowercase
+
+if [[ "$SETUP_KYUREM" != "y" && "$SETUP_KYUREM" != "yes" ]]; then
+  echo "==> Skipping Kyurem server setup"
+  exit 0
+fi
+
 # ---- SMB credentials ----
 CREDS_FILE="$REAL_HOME/.smbcreds"
 
@@ -55,7 +64,6 @@ KYUREM_FSTAB=$(cat <<EOF
 EOF
 )
 
-
 # ---- mount points ----
 sudo mkdir -p /media/kyurem-s /media/kyurem-a
 sudo chown "$REAL_UID:$REAL_GID" /media/kyurem-s /media/kyurem-a
@@ -68,5 +76,10 @@ else
   echo "==> kyurem mounts already configured"
 fi
 
+# ---- reload + mount (non-fatal) ----
 sudo systemctl daemon-reload
-sudo mount -a
+
+echo "==> Attempting to mount filesystems"
+if ! sudo mount -a; then
+  echo "⚠️  mount -a failed (this is non-fatal, continuing)"
+fi
