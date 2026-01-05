@@ -1,8 +1,0 @@
-partitionmanager
-kdeconnect
-sshfs
-python-nautilus
-qt6-tools
-obsidian
-obs-studio
-krita

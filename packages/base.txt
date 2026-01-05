@@ -10,3 +10,16 @@ bluez
 bluez-utils
 nodejs-lts-krypton
 dotnet-sdk
+partitionmanager
+kdeconnect
+sshfs
+python-nautilus
+qt6-tools
+obsidian
+obs-studio
+krita
+dotnet-runtime
+dotnet-sdk
+fastfetch
+grim
+obsidian

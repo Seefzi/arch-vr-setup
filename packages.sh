@@ -7,7 +7,6 @@ if ! command -v yay &>/dev/null; then
 fi
 
 sudo pacman -S --needed --noconfirm $(< packages/base.txt)
-sudo pacman -S --needed --noconfirm $(< packages/desktop.txt)
 yay -S --needed --noconfirm $(< packages/aur.txt)
 
 echo
