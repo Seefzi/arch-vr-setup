@@ -3,6 +3,10 @@ if [ "$SHELL" != "/bin/fish" ]; then
   chsh -s /bin/fish
 fi
 
+git clone https://github.com/oh-my-fish/oh-my-fish
+cd oh-my-fish
+bin/install --offline
+
 # ---- pacman parallel downloads ----
 PACMAN_CONF="/etc/pacman.conf"
 
