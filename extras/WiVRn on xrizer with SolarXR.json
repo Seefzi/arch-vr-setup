@@ -1,0 +1,57 @@
+{
+  "uuid": "@UUID@",
+  "name": "WiVRn on xrizer with SolarXR",
+  "xrservice_type": "Wivrn",
+  "xrservice_path": "/home/seefzi/.local/share/envision/@UUID@/xrservice",
+  "xrservice_repo": "https://github.com/notpeelz/WiVRn.git",
+  "xrservice_branch": "solarxr-patches",
+  "xrservice_cmake_flags": {
+    "WIVRN_FEATURE_SOLARXR": "ON"
+  },
+  "opencomposite_path": "/home/seefzi/.local/share/envision/@UUID@/opencomposite",
+  "opencomposite_repo": null,
+  "opencomposite_branch": null,
+  "ovr_comp": {
+    "mod_type": "Xrizer",
+    "repo": "https://github.com/ImSapphire/xrizer",
+    "branch": "next",
+    "path": "/home/seefzi/.local/share/envision/@UUID@/xrizer"
+  },
+  "features": {
+    "libsurvive": {
+      "feature_type": "Libsurvive",
+      "enabled": false,
+      "path": "/home/seefzi/.local/share/envision/@UUID@/libsurvive",
+      "repo": null,
+      "branch": null
+    },
+    "basalt": {
+      "feature_type": "Basalt",
+      "enabled": false,
+      "path": "/home/seefzi/.local/share/envision/@UUID@/basalt",
+      "repo": null,
+      "branch": null
+    },
+    "openhmd": {
+      "feature_type": "OpenHmd",
+      "enabled": false,
+      "path": "/home/seefzi/.local/share/envision/@UUID@/openhmd",
+      "repo": null,
+      "branch": null
+    },
+    "mercury_enabled": false
+  },
+  "environment": {
+    "U_PACING_APP_USE_MIN_FRAME_PERIOD": "1",
+    "XRT_CURATED_GUI": "1",
+    "LD_LIBRARY_PATH": "/home/seefzi/.local/share/envision/prefixes/@UUID@/lib:/home/seefzi/.local/share/envision/prefixes/@UUID@/lib64",
+    "XRT_DEBUG_GUI": "1"
+  },
+  "prefix": "/home/seefzi/.local/share/envision/prefixes/@UUID@",
+  "can_be_built": true,
+  "editable": true,
+  "pull_on_build": true,
+  "lighthouse_driver": "Vive",
+  "xrservice_launch_options": "%command% --no-instructions --no-manage-active-runtime",
+  "skip_dependency_check": false
+}

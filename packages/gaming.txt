@@ -10,3 +10,6 @@ prismlauncher
 libtiff5
 slimevr-beta-bin
 protonup-qt
+cli11 
+glib2-devel 
+nlohmann-json
