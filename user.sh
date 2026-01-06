@@ -3,12 +3,14 @@ if [ "$SHELL" != "/bin/fish" ]; then
   chsh -s /bin/fish
 fi
 
+echo "==> Installing omf (use 'exit' command once it's done)"
+
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 # ---- pacman parallel downloads ----
 PACMAN_CONF="/etc/pacman.conf"
 
-echo "==> Configuring pacman performance options"
+echo "==> Configuring pacman"
 
 # Uncomment Color + VerbosePkgLists if present
 sudo sed -i 's/^#Color/Color/' "$PACMAN_CONF"
@@ -25,3 +27,7 @@ fi
 if ! grep -q '^ILoveCandy' "$PACMAN_CONF"; then
   sudo sed -i '/^\[options\]/a ILoveCandy' "$PACMAN_CONF"
 fi
+
+echo "==> Installing Layan theme"
+git clone https://github.com/vinceliuice/Layan-kde.git
+./Layan-kde/install.sh
