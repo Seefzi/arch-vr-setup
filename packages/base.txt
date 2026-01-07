@@ -24,3 +24,5 @@ fastfetch
 grim
 obsidian
 neovim
+btop
+rocm-smi-lib
