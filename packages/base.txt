@@ -26,3 +26,4 @@ obsidian
 neovim
 btop
 rocm-smi-lib
+kvantum
