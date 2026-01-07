@@ -28,6 +28,6 @@ if ! grep -q '^ILoveCandy' "$PACMAN_CONF"; then
   sudo sed -i '/^\[options\]/a ILoveCandy' "$PACMAN_CONF"
 fi
 
-echo "==> Installing Layan theme"
-git clone https://github.com/vinceliuice/Layan-kde.git
-./Layan-kde/install.sh
+echo "==> Installing Orthis theme"
+git clone https://github.com/vinceliuice/Orchis-kde.git
+./Orchis-kde/install.sh
