@@ -21,11 +21,11 @@ for s in "${services[@]}"; do
 done
 
 # ---- ask about kyurem servers ----
-read -rp "Would you like to configure Kyurem SMB mounts? [y/N]: " SETUP_KYUREM
+read -rp "Would you like to configure Zekrom SMB mounts? [y/N]: " SETUP_KYUREM
 SETUP_KYUREM=${SETUP_KYUREM,,} # lowercase
 
 if [[ "$SETUP_KYUREM" != "y" && "$SETUP_KYUREM" != "yes" ]]; then
-  echo "==> Skipping Kyurem server setup"
+  echo "==> Skipping Zekrom server setup"
   exit 0
 fi
 
@@ -52,15 +52,18 @@ fi
 
 # ---- fstab block ----
 FSTAB="/etc/fstab"
-MARKER="# === kyurem servers ==="
+MARKER="# === zekrom servers ==="
 
 KYUREM_FSTAB=$(cat <<EOF
-# === kyurem servers ===
-# kyurem active server
-//kyurem/speed   /media/kyurem-s   cifs   credentials=$CREDS_FILE,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
+# === zekrom servers ===
+# zekrom active server
+//zekrom/int-ssd   /net/zekrom   cifs   credentials=/home/kerfus/.smbcreds,iocharset=utf8,nofail,x-systemd.automount,uid=1000,gid=1000   0 0
 
-# kyurem hoard server
-//kyurem/archive /media/kyurem-a   cifs   credentials=$CREDS_FILE,iocharset=utf8,nofail,x-systemd.automount,uid=$REAL_UID,gid=$REAL_GID   0 0
+# zekrom legacy server
+//zekrom/ext-ssd   /net/zekrom-legacy   cifs   credentials=/home/kerfus/.smbcreds,iocharset=utf8,nofail,x-systemd.automount,uid=1000,gid=1000   0 0
+
+# kyurem archive server
+//zekrom/ext-hdd /net/zekrom-archive   cifs   credentials=/home/kerfus/.smbcreds,iocharset=utf8,nofail,x-systemd.automount,uid=1000,gid=1000   0 0
 EOF
 )
 
